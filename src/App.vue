@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import AppNav from './components/AppNav';
+import AppNav from "./components/AppNav";
 import HelloWorld from "./components/HelloWorld";
 
 export default {

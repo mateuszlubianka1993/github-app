@@ -1,12 +1,6 @@
 <template>
-  <div
-    class="overflow-hidden"
-  >
-    <v-app-bar
-      color="deep-purple accent-4"
-      dark
-      prominent
-    >
+  <div class="overflow-hidden">
+    <v-app-bar color="deep-purple accent-4" dark prominent>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-toolbar-title>Github App</v-toolbar-title>
@@ -26,16 +20,8 @@
       </v-btn>
     </v-app-bar>
 
-    <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      bottom
-      temporary
-    >
-      <v-list
-        nav
-        dense
-      >
+    <v-navigation-drawer v-model="drawer" absolute bottom temporary>
+      <v-list nav dense>
         <v-list-item-group
           v-model="group"
           active-class="deep-purple--text text--accent-4"
@@ -62,16 +48,16 @@
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      drawer: false,
-      group: null,
-    }),
+export default {
+  data: () => ({
+    drawer: false,
+    group: null
+  }),
 
-    watch: {
-      group () {
-        this.drawer = false
-      },
-    },
+  watch: {
+    group() {
+      this.drawer = false;
+    }
   }
+};
 </script>
