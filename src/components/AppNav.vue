@@ -26,12 +26,12 @@
           v-model="group"
           active-class="deep-purple--text text--accent-4"
         >
-          <v-list-item>
+          <v-list-item to="/" link>
             <v-list-item-title>Foo</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
-            <v-list-item-title>Bar</v-list-item-title>
+          <v-list-item to="/about" link>
+            <v-list-item-title>About</v-list-item-title>
           </v-list-item>
 
           <v-list-item>
