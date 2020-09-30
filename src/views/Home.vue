@@ -1,6 +1,9 @@
 <template>
   <div class="home">
-    <Header titleMsg="Welcome to Github App" subtitleMsg="Built for developers!" />
+    <Header
+      titleMsg="Welcome to Github App"
+      subtitleMsg="Built for developers!"
+    />
     <h3>xxx</h3>
     <h3>xxx</h3>
     <h3>xxx</h3>
