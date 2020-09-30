@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Header msg="Welcome to Github App" />
+    <h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3><h3>xxx</h3>
   </div>
 </template>
 
 <script>
-import HelloWorld from "@/components/HelloWorld.vue";
+import Header from "@/components/Header.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    Header
   }
 };
 </script>

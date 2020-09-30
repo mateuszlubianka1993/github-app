@@ -1,6 +1,6 @@
 <template>
   <div class="overflow-hidden">
-    <v-app-bar color="deep-purple accent-4" dark prominent>
+    <v-app-bar color="orange lighten-1" dark prominent>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-toolbar-title>Github App</v-toolbar-title>
@@ -24,7 +24,7 @@
       <v-list nav dense>
         <v-list-item-group
           v-model="group"
-          active-class="deep-purple--text text--accent-4"
+          active-class="orange--text lighten-1--text"
         >
           <v-list-item to="/" link>
             <v-list-item-title>Foo</v-list-item-title>

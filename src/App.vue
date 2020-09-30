@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <AppNav />
-    <router-view/>
+    <router-view />
   </v-app>
 </template>
 
