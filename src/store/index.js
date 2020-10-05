@@ -6,30 +6,30 @@ import githubApi from "../apis/githubApi";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-    state: {
-        user: []
-    },
-    mutations: {
-        fillUser(state, data) {
-            const results = [];
-            results.push(data);
-            state.user = results;
-            console.log(data);
-        }
-    },
-    actions: {
-        getUser({ commit }, payload) {
-            githubApi
-                .get(`/users/${payload}`)
-                .then(res => {
-                    commit("fillUser", res.data);
-                })
-                .catch(err => console.log(err));
-        }
-    },
-    getters: {
-        user(state) {
-            return state.user;
-        }
+  state: {
+    user: []
+  },
+  mutations: {
+    fillUser(state, data) {
+      const results = [];
+      results.push(data);
+      state.user = results;
+      console.log(data);
     }
+  },
+  actions: {
+    getUser({ commit }, payload) {
+      githubApi
+        .get(`/users/${payload}`)
+        .then(res => {
+          commit("fillUser", res.data);
+        })
+        .catch(err => console.log(err));
+    }
+  },
+  getters: {
+    user(state) {
+      return state.user;
+    }
+  }
 });
