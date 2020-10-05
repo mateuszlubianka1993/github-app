@@ -13,7 +13,17 @@
             ></v-text-field>
           </v-col>
         </v-row>
-        <v-btn color="orange lighten-1" dark type="submit" block depressed elevation="12" outlined raised rounded>
+        <v-btn
+          color="orange lighten-1"
+          dark
+          type="submit"
+          block
+          depressed
+          elevation="12"
+          outlined
+          raised
+          rounded
+        >
           Search
         </v-btn>
       </v-container>
@@ -23,7 +33,9 @@
       <UserCard :user="user[0]"></UserCard>
     </div>
     <div class="container" v-else>
-      <h2 class="text-center"><v-icon style="font-size: 128px">mdi-account-search</v-icon></h2>
+      <h2 class="text-center">
+        <v-icon style="font-size: 128px">mdi-account-search</v-icon>
+      </h2>
       <h2 class="text-center">Serch user by login.</h2>
     </div>
   </div>
