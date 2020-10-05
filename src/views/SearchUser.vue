@@ -18,10 +18,15 @@
         </v-btn>
       </v-container>
     </v-form>
+    <div class="container">
+      <h4 v-if="user !== {}"> {{ user.login }}</h4>
+    </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   name: "SearchUser",
   data: () => ({
@@ -36,6 +41,11 @@ export default {
     searchUser() {
       this.$store.dispatch("getUser", this.username);
     }
+  },
+  computed: {
+    ...mapGetters([
+        'user'
+      ])
   }
 };
 </script>

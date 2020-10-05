@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
-import githubApi from '../apis/githubApi';
+import githubApi from "../apis/githubApi";
 
 Vue.use(Vuex);
 
@@ -11,19 +11,23 @@ export default new Vuex.Store({
     },
     mutations: {
         fillUser(state, data) {
-            state.user = data
-            console.log(data)
+            state.user = data;
+            console.log(data);
         }
     },
     actions: {
         getUser({ commit }, payload) {
-
-            githubApi.get(`/users/${payload}`)
+            githubApi
+                .get(`/users/${payload}`)
                 .then(res => {
-                    commit("fillUser", res.data)
+                    commit("fillUser", res.data);
                 })
-                .catch(err => console.log(err))
+                .catch(err => console.log(err));
         }
     },
-    modules: {}
+    getters: {
+        user(state) {
+            return state.user
+        }
+    }
 });
