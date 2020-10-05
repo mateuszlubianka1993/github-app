@@ -19,13 +19,13 @@
       </v-container>
     </v-form>
     <div class="container">
-      <h4 v-if="user !== {}"> {{ user.login }}</h4>
+      <h4 v-if="user !== {}">{{ user.login }}</h4>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 
 export default {
   name: "SearchUser",
@@ -43,9 +43,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters([
-        'user'
-      ])
+    ...mapGetters(["user"])
   }
 };
 </script>
