@@ -34,8 +34,8 @@
             <v-list-item-title>About</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
-            <v-list-item-title>Fizz</v-list-item-title>
+          <v-list-item to="/search-user" link>
+            <v-list-item-title>Search user</v-list-item-title>
           </v-list-item>
 
           <v-list-item>
