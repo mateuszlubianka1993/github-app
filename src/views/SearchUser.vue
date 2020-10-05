@@ -18,17 +18,21 @@
         </v-btn>
       </v-container>
     </v-form>
-    <div class="container">
-      <h4 v-if="user !== {}">{{ user.login }}</h4>
+    <div class="container" v-if="user.length > 0">
+      <UserCard :user="user[0]"></UserCard>
     </div>
   </div>
 </template>
 
 <script>
+import UserCard from '../components/UserCard';
 import { mapGetters } from "vuex";
 
 export default {
   name: "SearchUser",
+  components: {
+    UserCard
+  },
   data: () => ({
     valid: false,
     username: "",
