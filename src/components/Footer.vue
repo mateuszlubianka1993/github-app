@@ -1,5 +1,5 @@
 <template>
-  <v-footer v-bind="localAttrs" class="pa-0" fixed>
+  <v-footer class="pa-0" fixed>
     <v-card flat tile width="100%" class="orange lighten-1 text-center">
       <v-card-text class="white--text">
         {{ new Date().getFullYear() }} — <strong>Github App</strong>
