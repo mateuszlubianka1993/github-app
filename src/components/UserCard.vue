@@ -93,7 +93,7 @@
 
     <v-card-actions>
       <div class="my-2 col">
-        <v-btn small color="orange lighten-1" dark>
+        <v-btn small color="orange lighten-1" dark :to="{name: 'UserRepos', params: {user: user.login} }">
           See User repos
         </v-btn>
       </div>
