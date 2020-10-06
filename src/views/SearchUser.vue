@@ -3,7 +3,7 @@
     <v-form v-model="valid" @submit.prevent="searchUser">
       <v-container>
         <v-row>
-          <v-col cols="12" md="4">
+          <v-col cols="12" md="8" lg="6" class="mr-auto ml-auto">
             <v-text-field
               v-model="username"
               :rules="userRules"
@@ -13,7 +13,9 @@
             ></v-text-field>
           </v-col>
         </v-row>
-        <v-btn
+        <v-row>
+          <v-col cols="12" md="8" lg="6" class="mr-auto ml-auto">
+            <v-btn
           color="orange lighten-1"
           dark
           type="submit"
@@ -26,6 +28,8 @@
         >
           Search
         </v-btn>
+          </v-col>
+        </v-row>
       </v-container>
     </v-form>
     <v-divider class="mt-6"></v-divider>

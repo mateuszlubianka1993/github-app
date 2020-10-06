@@ -27,7 +27,7 @@
           active-class="orange--text lighten-1--text"
         >
           <v-list-item to="/" link>
-            <v-list-item-title>Foo</v-list-item-title>
+            <v-list-item-title>Home</v-list-item-title>
           </v-list-item>
 
           <v-list-item to="/about" link>
