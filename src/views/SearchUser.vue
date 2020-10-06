@@ -16,18 +16,18 @@
         <v-row>
           <v-col cols="12" md="8" lg="6" class="mr-auto ml-auto">
             <v-btn
-          color="orange lighten-1"
-          dark
-          type="submit"
-          block
-          depressed
-          elevation="12"
-          outlined
-          raised
-          rounded
-        >
-          Search
-        </v-btn>
+              color="orange lighten-1"
+              dark
+              type="submit"
+              block
+              depressed
+              elevation="12"
+              outlined
+              raised
+              rounded
+            >
+              Search
+            </v-btn>
           </v-col>
         </v-row>
       </v-container>
