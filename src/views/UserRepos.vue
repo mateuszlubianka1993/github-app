@@ -5,9 +5,9 @@
       {{ user }} repositories list
     </h2>
     <div class="list" v-if="repos.length > 0">
-        <div class="item" v-for="repo in repos" :key="repo.full_name">
-            {{repo.full_name}}
-        </div>
+      <div class="item" v-for="repo in repos" :key="repo.full_name">
+        {{ repo.full_name }}
+      </div>
     </div>
     <div v-else>There is nothing here!</div>
   </div>
@@ -20,7 +20,7 @@ export default {
   name: "UserRepos",
   props: ["user"],
   created() {
-      this.$store.dispatch("getUserRepos", this.user);
+    this.$store.dispatch("getUserRepos", this.user);
   },
   computed: {
     ...mapGetters(["repos"])
