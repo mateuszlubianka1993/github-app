@@ -7,7 +7,13 @@
     <v-divider class="mt-4 mb-7"></v-divider>
     <v-container v-if="repos.length > 0">
       <v-row dense>
-        <v-col cols="12" v-for="repo in repos" :key="repo.full_name">
+        <v-col
+          cols="12"
+          md="6"
+          lg="4"
+          v-for="repo in repos"
+          :key="repo.full_name"
+        >
           <RepoCard :repo="repo" />
         </v-col>
       </v-row>
