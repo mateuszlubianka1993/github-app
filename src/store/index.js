@@ -51,12 +51,11 @@ export default new Vuex.Store({
       githubApi
         .get(`/organizations`, {
           params: {
-            per_page: 10
+            per_page: 15
           }
         })
         .then(res => {
           commit("fillOrganizations", res.data);
-          console.log(res.data);
         })
         .catch(err => console.log(err));
     }
