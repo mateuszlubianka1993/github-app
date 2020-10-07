@@ -5,11 +5,14 @@
       {{ user }} repositories list
     </h2>
     <v-divider class="mt-4 mb-7"></v-divider>
-    <div class="list" v-if="repos.length > 0">
-      <div class="item" v-for="repo in repos" :key="repo.full_name">
-        {{ repo.full_name }}
-      </div>
-    </div>
+    <v-container v-if="repos.length > 0">
+      <v-row dense>
+        <v-col cols="12" v-for="repo in repos" :key="repo.full_name">
+          <RepoCard :repo="repo" />
+        </v-col>
+      </v-row>
+      <v-divider class="mt-4 mb-4"></v-divider>
+    </v-container>
     <div v-else class="text-center">
       <v-divider class="mt-4 mb-7"></v-divider>
       <v-progress-circular
@@ -26,9 +29,13 @@
 
 <script>
 import { mapGetters } from "vuex";
+import RepoCard from "../components/RepoCard";
 
 export default {
   name: "UserRepos",
+  components: {
+    RepoCard
+  },
   props: ["user"],
   created() {
     setTimeout(() => {
