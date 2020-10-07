@@ -49,6 +49,9 @@ export default {
   name: "Home",
   components: {
     Header
+  },
+  created() {
+    this.$store.dispatch("getOrganizations", this.user);
   }
 };
 </script>

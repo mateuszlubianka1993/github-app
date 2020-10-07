@@ -8,7 +8,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     user: [],
-    userRepos: []
+    userRepos: [],
+    organizations: []
   },
   mutations: {
     fillUser(state, data) {
@@ -18,6 +19,9 @@ export default new Vuex.Store({
     },
     fillUserRepos(state, data) {
       state.userRepos = data;
+    },
+    fillOrganizations(state, data) {
+      state.organizations = data;
     }
   },
   actions: {
@@ -42,6 +46,19 @@ export default new Vuex.Store({
           commit("fillUserRepos", res.data);
         })
         .catch(err => console.log(err));
+    },
+    getOrganizations({ commit }) {
+      githubApi
+        .get(`/organizations`, {
+          params: {
+            per_page: 10
+          }
+        })
+        .then(res => {
+          commit("fillOrganizations", res.data);
+          console.log(res.data);
+        })
+        .catch(err => console.log(err));
     }
   },
   getters: {
@@ -50,6 +67,9 @@ export default new Vuex.Store({
     },
     repos(state) {
       return state.userRepos;
+    },
+    organizations(state) {
+      return state.organizations;
     }
   }
 });
