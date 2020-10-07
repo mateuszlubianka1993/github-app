@@ -15,7 +15,6 @@ export default new Vuex.Store({
       const results = [];
       results.push(data);
       state.user = results;
-      console.log(data);
     },
     fillUserRepos(state, data) {
       state.userRepos = data;
@@ -35,12 +34,12 @@ export default new Vuex.Store({
         .get(`/users/${payload}/repos`, {
           params: {
             sort: "created",
-            direction: "desc"
+            direction: "desc",
+            per_page: 60
           }
         })
         .then(res => {
           commit("fillUserRepos", res.data);
-          console.log(res.data);
         })
         .catch(err => console.log(err));
     }
