@@ -1,5 +1,5 @@
 <template>
-  <v-card color="grey darken-3" dark>
+  <v-card color="grey darken-3" dark height="100%">
     <div class="d-flex flex-no-wrap justify-space-between">
       <div>
         <v-card-title class="headline">
@@ -21,9 +21,6 @@
                 icon
                 color="white"
                 outlined
-                absolute
-                bottom
-                left
               >
                 <v-icon>mdi-github</v-icon>
               </v-btn>

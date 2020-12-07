@@ -10,8 +10,8 @@
       <v-row dense>
         <v-col
           cols="12"
-          md="6"
-          lg="4"
+          md="4"
+          lg="3"
           v-for="organization in organizations"
           :key="organization.full_name"
         >
