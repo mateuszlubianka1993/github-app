@@ -7,17 +7,22 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-filter</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn v-bind="attrs" v-on="on" icon to="/search-user">
+            <v-icon>mdi-magnify</v-icon>
+          </v-btn>
+        </template>
+        <span>Search Github users</span>
+      </v-tooltip>
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn v-bind="attrs" v-on="on" icon to="/about">
+            <v-icon>mdi-information</v-icon>
+          </v-btn>
+        </template>
+        <span>Go to About page</span>
+      </v-tooltip>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" absolute temporary>
@@ -36,10 +41,6 @@
 
           <v-list-item to="/search-user" link>
             <v-list-item-title>Search user</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Buzz</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
