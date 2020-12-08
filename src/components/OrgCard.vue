@@ -16,8 +16,7 @@
               <v-btn
                 v-bind="attrs"
                 v-on="on"
-                :href="organization.repos_url"
-                target="_blank"
+                :to="{ name: '' }"
                 icon
                 color="white"
                 outlined

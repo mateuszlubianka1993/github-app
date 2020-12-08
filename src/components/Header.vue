@@ -17,6 +17,7 @@
             icon
             large
             outlined
+            href="#" v-scroll-to="'#organizations'"
             ><v-icon dark>
               mdi-arrow-down
             </v-icon></v-btn
