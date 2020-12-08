@@ -16,7 +16,10 @@
               <v-btn
                 v-bind="attrs"
                 v-on="on"
-                :to="{ name: '' }"
+                :to="{
+                  name: 'OrganizationRepos',
+                  params: { organization: organization.login }
+                }"
                 icon
                 color="white"
                 outlined

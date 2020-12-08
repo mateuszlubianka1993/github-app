@@ -9,7 +9,8 @@ export default new Vuex.Store({
   state: {
     user: [],
     userRepos: [],
-    organizations: []
+    organizations: [],
+    organizationRepos: []
   },
   mutations: {
     fillUser(state, data) {
@@ -22,6 +23,9 @@ export default new Vuex.Store({
     },
     fillOrganizations(state, data) {
       state.organizations = data;
+    },
+    fillOrganizationRepos(state, data) {
+      state.organizationRepos = data;
     }
   },
   actions: {
@@ -58,6 +62,20 @@ export default new Vuex.Store({
           commit("fillOrganizations", res.data);
         })
         .catch(err => console.log(err));
+    },
+    getOrganizationRepos({ commit }, payload) {
+      githubApi
+        .get(`/orgs/${payload}/repos`, {
+          params: {
+            sort: "created",
+            direction: "desc",
+            per_page: 60
+          }
+        })
+        .then(res => {
+          commit("fillOrganizationRepos", res.data);
+        })
+        .catch(err => console.log(err));
     }
   },
   getters: {
@@ -69,6 +87,9 @@ export default new Vuex.Store({
     },
     organizations(state) {
       return state.organizations;
+    },
+    organizationRepos(state) {
+      return state.organizationRepos;
     }
   }
 });

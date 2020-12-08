@@ -4,7 +4,9 @@
       titleMsg="Welcome to Github App"
       subtitleMsg="Built for developers!"
     />
-    <h2 class="text-center mt-6" id="organizations">List of the first 15 organizations.</h2>
+    <h2 class="text-center mt-6" id="organizations">
+      List of the first 15 organizations.
+    </h2>
     <v-divider class="mt-4 mb-7"></v-divider>
     <v-container v-if="organizations.length > 0" class="pb-5">
       <v-row dense>

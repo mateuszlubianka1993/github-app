@@ -26,6 +26,12 @@ const routes = [
     name: "UserRepos",
     props: true,
     component: () => import("../views/UserRepos.vue")
+  },
+  {
+    path: "/organization-repos/:organization",
+    name: "OrganizationRepos",
+    props: true,
+    component: () => import("../views/OrganizationRepos.vue")
   }
 ];
 
